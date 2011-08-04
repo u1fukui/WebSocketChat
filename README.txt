@@ -1,0 +1,1 @@
+http://gihyo.jp/dev/feature/01/websocketを参考に作ってみたサンプルです。

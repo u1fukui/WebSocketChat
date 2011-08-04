@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>WebSocketChat</groupId>
+  <artifactId>WebSocketChat</artifactId>
+  <name>WebSocketChat</name>
+  <version>0.0.1-SNAPSHOT</version>
+  <properties>
+    <package.package-name>webSocketChat</package.package-name>
+    <package.main-class>${package.package-name}.${name}</package.main-class>
+    <package.base-name>${name}-${version}</package.base-name>
+    <package.jar-name>${package.base-name}.jar</package.jar-name>
+  </properties>
+  
+  <build>
+    <plugins>
+      
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+          <encoding>UTF-8</encoding>
+          <debug>true</debug>
+          <optimize>false</optimize>
+        </configuration>
+      </plugin>
+      
+       <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>${package.main-class}</mainClass>
+              <packageName>${package.package-name}</packageName>
+              <addClasspath>true</addClasspath>
+            </manifest>
+            <manifestEntries>
+              <Built-By></Built-By>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+      
+    </plugins>
+  </build>
+  
+  <dependencies>
+  	<dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-server</artifactId>
+      <version>7.4.5.v20110725</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-servlets</artifactId>
+      <version>7.4.5.v20110725</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-webapp</artifactId>
+      <version>7.4.5.v20110725</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-websocket</artifactId>
+      <version>7.4.5.v20110725</version>
+    </dependency>
+  </dependencies>
+
+</project>
